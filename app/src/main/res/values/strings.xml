@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Tugas2</string>
+    <string name="Home">Home</string>
+    <string name="WebView">Web View</string>
+    <string name="Exit">Exit</string>
+</resources>
