@@ -13,35 +13,16 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.ppb.tugas2.R;
 import com.ppb.tugas2.databinding.FragmentExitBinding;
 
 
 public class ExitFragment extends Fragment {
 
-    private ExitViewModel exitViewModel;
-    private FragmentExitBinding binding;
-
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        exitViewModel =
-                new ViewModelProvider(this).get(ExitViewModel.class);
-
-        binding = FragmentExitBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-        final Button textView = binding.exit;
-        exitViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-        return root;
-    }
-
+    @Nullable
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_exit, container, false);
     }
 }

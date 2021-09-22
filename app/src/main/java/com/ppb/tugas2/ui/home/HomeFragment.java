@@ -1,5 +1,7 @@
 package com.ppb.tugas2.ui.home;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,27 +21,14 @@ import com.ppb.tugas2.R;
 import com.ppb.tugas2.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
-
-    private FragmentHomeBinding binding;
-
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-        final TextView textView = binding.cbPilih;
-        final CheckBox checkBox1 = binding.cbEducation;
-        final CheckBox checkBox2 = binding.cbLifestyle;
-        final CheckBox checkBox3 = binding.cbTechnology;
-        final Button button = binding.btSubmit;
-        return root;
-    }
-
-
+    private CheckBox cbEdu, cbLife, cbTech;
+    private Button btSubmit, btnToWebview;
+    @Nullable
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_home, container, false);
+
     }
+
 }

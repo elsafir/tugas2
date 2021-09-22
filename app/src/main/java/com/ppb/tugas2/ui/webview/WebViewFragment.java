@@ -12,28 +12,16 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+
+import com.ppb.tugas2.R;
 import com.ppb.tugas2.databinding.FragmentWebviewBinding;
 
 public class WebViewFragment extends Fragment {
 
-    private WebViewModel webViewModel;
-    private FragmentWebviewBinding binding;
-
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        webViewModel =
-                new ViewModelProvider(this).get(WebViewModel.class);
-
-        binding = FragmentWebviewBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-        final WebView webView = binding.web;
-        return root;
-    }
-
+    @Nullable
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_webview, container, false);
     }
 }
