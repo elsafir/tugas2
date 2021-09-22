@@ -18,6 +18,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.ppb.tugas2.MainActivity;
+import com.ppb.tugas2.MainActivity2;
 import com.ppb.tugas2.R;
 import com.ppb.tugas2.databinding.FragmentHomeBinding;
 
@@ -87,6 +88,7 @@ public class HomeFragment extends Fragment {
                 startActivity(moveIntent);
             }
         });
+
                 return view1;
     }
 
