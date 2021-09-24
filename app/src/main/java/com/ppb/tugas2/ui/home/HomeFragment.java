@@ -29,68 +29,23 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View view1= inflater.inflate(R.layout.fragment_home, container, false);
-        cbEdu =  view1.findViewById(R.id.cb_education);
-        cbLife = view1.findViewById(R.id.cb_lifestyle);
-        cbTech = view1.findViewById(R.id.cb_technology);
-        btSubmit =  view1.findViewById(R.id.bt_submit);
-        btnToWebview = view1.findViewById(R.id.btn_webview);
+        View viewlast = inflater.inflate(R.layout.fragment_home, container, false);
 
-        cbEdu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (((CheckBox) view).isChecked()) {
-                    Toast.makeText(getActivity(),
-                            "Anda memilih Education", Toast.LENGTH_LONG).show(); }
-            }});
-        cbLife.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (((CheckBox) view).isChecked()) {
-                    Toast.makeText(getActivity(),
-                            "Anda memilih Lifestyle", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-        cbTech.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (((CheckBox) view).isChecked()) {
-                    Toast.makeText(getActivity(),
-                            "Anda memilih Technology", Toast.LENGTH_LONG).show();}}});
+        cbEdu = viewlast.findViewById(R.id.cb_education);
+        cbLife = viewlast.findViewById(R.id.cb_lifestyle);
+        cbTech = viewlast.findViewById(R.id.cb_technology);
+        btSubmit = viewlast.findViewById(R.id.bt_submit);
+        btnToWebview = viewlast.findViewById(R.id.btn_webview);
+
         btSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                String query = "";
-                if (cbEdu.isChecked() && cbLife.isChecked() && cbTech.isChecked()) {
-                    query = "education lifestyle technology";
-                } else if (cbEdu.isChecked() && cbLife.isChecked()) {
-                    query = "education lifestyle";
-                } else if (cbEdu.isChecked() && cbTech.isChecked()) {
-                    query = "education technology";
-                } else if (cbTech.isChecked() && cbLife.isChecked()) {
-                    query = "technology lifestyle";
-                } else if (cbLife.isChecked()) {
-                    query = "lifestyle";
-                } else if (cbTech.isChecked()) {
-                    query = "technology";
-                } else {
-                    query = "education";
-                }
-                Intent dialPhoneIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/results?search_query=" + query));
-                startActivity(dialPhoneIntent);
+            public void onClick(View v) {
+                String query = "Universitas Trunojoyo Madura";
+                Intent goyt = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/results?search_query=" + query));
+                startActivity(goyt);
             }
         });
-        btnToWebview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent moveIntent = new Intent(getActivity(), MainActivity2.class);
-                startActivity(moveIntent);
-            }
-        });
-
-                return view1;
+        return viewlast;
     }
-
 
 }
