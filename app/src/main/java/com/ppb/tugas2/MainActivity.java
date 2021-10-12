@@ -15,15 +15,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
-import com.ppb.tugas2.databinding.ActivityMainBinding;
 import com.ppb.tugas2.ui.exit.ExitFragment;
 import com.ppb.tugas2.ui.home.HomeFragment;
-import com.ppb.tugas2.ui.webview.WebViewFragment;
+import com.ppb.tugas2.ui.videoview.VideoViewFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.navigation_home:
                     selectedFragment = new HomeFragment();
                     break;
-                case  R.id.navigation_webview:
-                    selectedFragment= new WebViewFragment();
+                case  R.id.navigation_videoview:
+                    selectedFragment= new VideoViewFragment();
                     break;
                 case R.id.navigation_exit:h:
                     selectedFragment = new ExitFragment();

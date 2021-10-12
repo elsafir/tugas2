@@ -7,9 +7,9 @@
         android:title="@string/Home" />
 
     <item
-        android:id="@+id/navigation_webview"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/WebView" />
+        android:id="@+id/navigation_videoview"
+        android:icon="@drawable/ic_baseline_video_library_24"
+        android:title="@string/video_player" />
 
     <item
         android:id="@+id/navigation_exit"
