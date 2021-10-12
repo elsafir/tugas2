@@ -8,23 +8,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 
-import com.ppb.tugas2.MainActivity;
-import com.ppb.tugas2.MainActivity2;
 import com.ppb.tugas2.R;
-import com.ppb.tugas2.databinding.FragmentHomeBinding;
+import com.ppb.tugas2.ui.crud.crudHome;
 
 public class HomeFragment extends Fragment {
     private CheckBox cbEdu, cbLife, cbTech;
-    private Button btSubmit, btnToWebview;
+    private Button btSubmit, btnToWebview, btnTocrud;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -36,13 +30,20 @@ public class HomeFragment extends Fragment {
         cbTech = viewlast.findViewById(R.id.cb_technology);
         btSubmit = viewlast.findViewById(R.id.bt_submit);
         btnToWebview = viewlast.findViewById(R.id.btn_webview);
+        btnTocrud = viewlast.findViewById(R.id.btn_crud);
 
         btSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String query = "Universitas Trunojoyo Madura";
-                Intent goyt = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/results?search_query=" + query));
-                startActivity(goyt);
+                        String query = "Universitas Trunojoyo Madura";
+                        Intent goyt = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/results?search_query=" + query));
+                        startActivity(goyt);
+            }
+        });
+        btnTocrud.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), crudHome.class));
             }
         });
         return viewlast;

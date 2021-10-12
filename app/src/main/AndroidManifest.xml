@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tugas2">
         <activity
+            android:name=".ui.crud.crudUpdate"
+            android:exported="true" />
+        <activity
+            android:name=".ui.crud.crudRead"
+            android:exported="true" />
+        <activity
+            android:name=".ui.crud.crudCreate"
+            android:exported="true" />
+        <activity
+            android:name=".ui.crud.crudHome"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity2"
             android:exported="true" />
         <activity
