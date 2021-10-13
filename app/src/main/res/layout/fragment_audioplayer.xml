@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -8,20 +9,20 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ui.exit.ExitFragment">
+    tools:context=".ui.AudioPlayer.AudioPlayer">
+
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play Your Music"
-        android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="48dp"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/background_light"
-        android:textSize="30sp"
+        android:fontFamily="casual"
+        android:text="Play Your Music"
         android:textAlignment="center"
-        android:fontFamily="casual" />
+        android:textSize="30sp"
+        android:textStyle="normal|bold" />
     <Button
         android:text="Play"
         android:layout_width="wrap_content"
@@ -32,14 +33,17 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="74dp" />
+        android:layout_marginBottom="74dp"
+        android:textColor="@color/black"/>
+
     <Button
-        android:text="Pause"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/button"
         android:layout_centerHorizontal="true"
-        android:id="@+id/button2" />
+        android:text="Pause"
+        android:textColor="@color/black" />
     <Button
         android:text="Stop"
         android:layout_width="wrap_content"
@@ -50,5 +54,6 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginRight="11dp"
-        android:layout_marginEnd="11dp" />
+        android:layout_marginEnd="11dp"
+        android:textColor="@color/black"/>
 </RelativeLayout>

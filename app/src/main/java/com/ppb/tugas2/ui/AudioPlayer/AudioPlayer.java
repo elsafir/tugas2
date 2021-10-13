@@ -1,36 +1,32 @@
-package com.ppb.tugas2.ui.exit;
+package com.ppb.tugas2.ui.AudioPlayer;
 
-import android.content.DialogInterface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.ppb.tugas2.R;
-import com.ppb.tugas2.databinding.FragmentExitBinding;
 
 import java.io.IOException;
 
 
-public class ExitFragment extends Fragment {
+public class AudioPlayer extends Fragment {
+    //ImageView imageView;
     Button btn_play, btn_pause, btn_stop;
     MediaPlayer mPlayer;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View viewlast = inflater.inflate(R.layout.fragment_exit, container, false);
+        View viewlast = inflater.inflate(R.layout.fragment_audioplayer, container, false);
+        //imageView=viewlast.findViewById(R.id.imageView);
         btn_play = viewlast.findViewById(R.id.button);
         btn_pause = viewlast.findViewById(R.id.button2);
         btn_stop = viewlast.findViewById(R.id.button3);

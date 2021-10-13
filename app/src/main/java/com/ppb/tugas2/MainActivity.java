@@ -1,22 +1,17 @@
 package com.ppb.tugas2;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.ppb.tugas2.ui.exit.ExitFragment;
+import com.ppb.tugas2.ui.AudioPlayer.AudioPlayer;
 import com.ppb.tugas2.ui.home.HomeFragment;
 import com.ppb.tugas2.ui.videoview.VideoViewFragment;
 
@@ -51,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
                 case  R.id.navigation_videoview:
                     selectedFragment= new VideoViewFragment();
                     break;
-                case R.id.navigation_exit:h:
-                    selectedFragment = new ExitFragment();
+                case R.id.navigation_audio:
+                    selectedFragment = new AudioPlayer();
                     break;
                 default: break;
             }
