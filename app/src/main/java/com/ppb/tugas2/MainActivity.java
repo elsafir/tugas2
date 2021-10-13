@@ -68,35 +68,4 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.bottom_nav_menu, menu);
         return true;
     }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.home:
-                Intent moveIntent = new Intent(MainActivity.this, MainActivity2.class);
-                startActivity(moveIntent);
-                return true;
-            case R.id.web:
-                WebView webView = findViewById(R.id.web);
-                webView.setWebViewClient(new WebViewClient());
-                webView.loadUrl("https://www.instagram.com");
-                WebSettings settings = webView.getSettings();
-                settings.setJavaScriptEnabled(true);
-                return true;
-            case R.id.exit:
-                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                        this);
-                alertDialogBuilder.setTitle("Keluar dari aplikasi?");
-                alertDialogBuilder
-                        .setMessage("Klik Ya untuk keluar!")
-                        .setIcon(R.mipmap.ic_launcher)
-                        .setCancelable(false)
-                        .setPositiveButton("Ya", (dialog, id) -> MainActivity.this.finish())
-                        .setNegativeButton("Tidak", (dialog, id) -> dialog.cancel());
-
-                AlertDialog alertDialog = alertDialogBuilder.create();
-
-                alertDialog.show();
-        }
-        return true;
-    }
 }
